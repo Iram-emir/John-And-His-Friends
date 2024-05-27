@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>project</title>
+  </head>
+  <body>
+    <center>
+      <h1 style="background-color: aquamarine">
+        <u><i>John And His Friends-Project</i></u>
+      </h1>
+    </center>
+
+    <script>
+      let emp = [
+        { id: 1, name: "john", age: "18", profession: "developer" },
+        { id: 2, name: "jack", age: "20", profession: "developer" },
+        { id: 3, name: "karen", age: "19", profession: "admin" },
+      ];
+
+      // 1.. Using map method
+      const DeveloperbyMap = emp.map((e) => {
+        if (e.profession === "developer") {
+          console.log(e);
+          return e;
+        }
+      });
+      console.log(DeveloperbyMap);
+
+      //2.. Using forEach method
+
+      const DeveloperbyForEach = emp.forEach((e) => {
+        if (e.profession === "developer") {
+          console.log(e);
+        }
+      });
+
+      //3.. Using addData()
+
+      function addData() {
+        emp.push({ id: 4, name: "susan", age: "20", profession: "intern" });
+        console.log(emp);
+      }
+      addData(); // calling the function
+
+      //4.. using removeAdmin()
+
+      function removeAdmin() {
+        const employee = emp.filter((e) => {
+          if (e.profession !== "admin") {
+            return e;
+          }
+        });
+        console.log(employee);
+      }
+      removeAdmin(); // calling the function
+
+      // 5.. ConcatinateArray()
+
+      let emp2 = [
+        { id: 1, name: "john", age: "18", profession: "developer" },
+        { id: 2, name: "jack", age: "20", profession: "developer" },
+        { id: 3, name: "karen", age: "19", profession: "admin" },
+      ];
+      let emp3 = [
+        { id: 4, name: "Amir", age: "13", profession: "pro-developer" },
+        { id: 5, name: "Iram", age: "24", profession: "mid-developer" },
+        { id: 6, name: "Ansh", age: "17", profession: "adminMain" },
+      ];
+
+      let newArray = emp2.concat(emp3);
+
+      console.log(newArray);
+    </script>
+  </body>
+</html>
